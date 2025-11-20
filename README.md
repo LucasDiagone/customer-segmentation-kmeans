@@ -62,19 +62,6 @@ A base utilizada é o **Mall Customers Dataset**, disponível publicamente no Ka
 
 ---
 
-## 📁 Estrutura do Projeto
-
-```
-📦 analise-cluster
- ┣ 📂 data
- ┣ 📂 src
- ┃ ┣ 📜 clusterizacao.ipynb
- ┃ ┣ 📜 anova_validacao.ipynb
- ┣ 📜 README.md
-```
-
----
-
 ## 👨‍💻 Autor
 
 **Lucas Diagone**  
