@@ -12,34 +12,48 @@ Aplicar métodos de agrupamento para identificar padrões e segmentos distintos 
 - **K-Means**
 - **Cluster Hierárquico** (com dendrograma)
 - **Padronização Z-Score**
+- **Heatmap de Correlação**
+- **Método do Cotovelo (Elbow)**
+- **Método Silhouette**
 - **ANOVA** para validação estatística
 - **Métodos para definição da quantidade ideal de clusters**
 
 ---
 
+## 📈 Análise Exploratória – Correlação
+
+Antes da clusterização, foi gerada uma **matriz de correlação** acompanhada de um **heatmap**, permitindo identificar relações entre variáveis, padrões ocultos e possíveis redundâncias importantes para o agrupamento.
+
+---
+
 ## 🔍 Definição da Quantidade Ideal de Clusters
 
-Foram utilizados dois métodos complementares:
+Foram utilizados métodos complementares:
 
 ### **1. Método do Cotovelo (Elbow Method)**
 - Analisa a redução da inércia (WCSS).
-- O ponto de “cotovelo” indicou que **k = 4 clusters** seria uma boa escolha.
+- O ponto de “cotovelo” indicou que **k = 4** seria uma boa escolha.
 
-### **2. Dendrograma do Cluster Hierárquico**
-- Permite visualizar as distâncias entre observações e como os grupos se formam.
-- O corte visual sugeriu **aproximadamente 4 divisões naturais** nos dados.
+### **2. Método Silhouette**
+- Mede o quão bem cada observação está associada ao seu cluster.
+- O maior valor de Silhouette também apontou para **k = 4**, reforçando a consistência da escolha.
+
+### **3. Dendrograma do Cluster Hierárquico**
+- Permite visualizar a formação dos grupos e as distâncias entre eles.
+- O corte visual sugeriu **aproximadamente 4 divisões naturais**.
 
 ---
 
 ## ✅ Conclusão
 
-Ambos os métodos convergiram para **4 clusters**, reforçando a consistência da escolha.
+Os métodos **Cotovelo**, **Silhouette** e **Hierárquico** convergiram para a mesma solução:  
+**4 clusters** é a segmentação mais consistente para este conjunto de dados.
 
 ---
 
 ## 📈 Validação Estatística com ANOVA
 
-Para verificar se os clusters apresentam diferenças estatísticas relevantes, foi aplicado o **teste ANOVA de uma via**.
+Para verificar se os clusters apresentam diferenças estatísticas relevantes, foi aplicado o **teste ANOVA de uma via** para cada variável.
 
 ### 📋 Termos da Tabela ANOVA (simplificados)
 
@@ -50,7 +64,7 @@ Para verificar se os clusters apresentam diferenças estatísticas relevantes, f
 
 ### 🧠 Interpretação
 
-Se **p-valor < 0.05**, concluímos que os clusters são significativamente diferentes, validando a eficiência da segmentação.
+Se **p-valor < 0.05**, concluímos que os clusters são significativamente diferentes, validando a qualidade da segmentação.
 
 ---
 
